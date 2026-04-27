@@ -105,7 +105,7 @@ Provider examples (any OpenAI-compatible endpoint works):
 | Qwen / DashScope | `https://dashscope.aliyuncs.com/compatible-mode/v1` | `qwen3.5-plus` |
 | OpenAI | `https://api.openai.com/v1` | `gpt-4o-mini` |
 | Ollama (local) | `http://localhost:11434/v1` | `qwen3:14b` |
-| OpenRouter | `https://openrouter.ai/api/v1` | `anthropic/claude-sonnet-4.6` |
+| OpenRouter | `https://openrouter.ai/api/v1` | `kimi-for-coding` |
 
 **Key config fields** (passed to `new PageAgent({...})`):
 

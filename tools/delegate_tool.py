@@ -2426,7 +2426,7 @@ DELEGATE_TASK_SCHEMA = {
                 "items": {"type": "string"},
                 "description": (
                     "Arguments for the ACP command (default: ['--acp', '--stdio']). "
-                    "Only used when acp_command is set. Example: ['--acp', '--stdio', '--model', 'claude-opus-4-6']"
+                    "Only used when acp_command is set. Example: ['--acp', '--stdio', '--model', 'kimi-for-coding']"
                 ),
             },
         },

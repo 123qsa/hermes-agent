@@ -31,7 +31,7 @@ Each line in the file is a self-contained JSON object. There are two variants:
 {
   "conversations": [ ... ],
   "timestamp": "2026-03-30T14:22:31.456789",
-  "model": "anthropic/claude-sonnet-4.6",
+  "model": "kimi-for-coding",
   "completed": true
 }
 ```
@@ -103,7 +103,7 @@ The `conversations` array uses ShareGPT role conventions:
     }
   ],
   "timestamp": "2026-03-30T14:22:31.456789",
-  "model": "anthropic/claude-sonnet-4.6",
+  "model": "kimi-for-coding",
   "completed": true
 }
 ```

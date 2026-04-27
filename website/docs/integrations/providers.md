@@ -489,7 +489,7 @@ Once you have at least one custom endpoint configured, you can switch models mid
 ```
 /model custom:qwen-2.5          # Switch to a model on your custom endpoint
 /model custom                    # Auto-detect the model from the endpoint
-/model openrouter:claude-sonnet-4 # Switch back to a cloud provider
+/model openrouter:kimi-for-coding # Switch back to a cloud provider
 ```
 
 If you have **named custom providers** configured (see below), use the triple syntax:
@@ -916,7 +916,7 @@ model:
 ```bash
 # Install and start
 pip install "litellm[proxy]"
-litellm --model anthropic/claude-sonnet-4 --port 4000
+litellm --model kimi-for-coding --port 4000
 
 # Or with a config file for multiple models:
 litellm --config litellm_config.yaml --port 4000
@@ -929,7 +929,7 @@ Example `litellm_config.yaml` with fallback:
 model_list:
   - model_name: "best"
     litellm_params:
-      model: anthropic/claude-sonnet-4
+      model: kimi-for-coding
       api_key: sk-ant-...
   - model_name: "best"
     litellm_params:
@@ -1156,7 +1156,7 @@ provider_routing:
   # data_collection: "deny"   # Exclude providers that may store/train on data
 ```
 
-**Shortcuts:** Append `:nitro` to any model name for throughput sorting (e.g., `anthropic/claude-sonnet-4:nitro`), or `:floor` for price sorting.
+**Shortcuts:** Append `:nitro` to any model name for throughput sorting (e.g., `kimi-for-coding:nitro`), or `:floor` for price sorting.
 
 ## Fallback Model
 
@@ -1165,7 +1165,7 @@ Configure a backup provider:model that Hermes switches to automatically when you
 ```yaml
 fallback_model:
   provider: openrouter                    # required
-  model: anthropic/claude-sonnet-4        # required
+  model: kimi-for-coding                        # required
   # base_url: http://localhost:8000/v1    # optional, for custom endpoints
   # key_env: MY_CUSTOM_KEY               # optional, env var name for custom endpoint API key
 ```

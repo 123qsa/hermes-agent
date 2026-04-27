@@ -9,7 +9,7 @@
 #
 # Override model:
 #   bash environments/benchmarks/yc_bench/run_eval.sh \
-#       --openai.model_name anthropic/claude-opus-4-20250514
+#       --openai.model_name kimi-for-coding
 #
 # Run a single preset:
 #   bash environments/benchmarks/yc_bench/run_eval.sh \

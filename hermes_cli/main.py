@@ -3073,7 +3073,7 @@ def _model_flow_azure_foundry(config, current_model=""):
     else:
         try:
             model_name = input(
-                f"Model / deployment name [{current_model or 'e.g. gpt-5.4, claude-sonnet-4-6'}]: "
+                f"Model / deployment name [{current_model or 'e.g. gpt-5.4, kimi-for-coding'}]: "
             ).strip()
         except (KeyboardInterrupt, EOFError):
             print("\nCancelled.")
@@ -3826,9 +3826,9 @@ def _model_flow_kimi(config, current_model=""):
 
     # Step 3: Model selection — show appropriate models for the endpoint
     if is_coding_plan:
-        # Coding Plan models (kimi-k2.6 first)
+        # Coding Plan models (kimi-for-coding first)
         model_list = [
-            "kimi-k2.6",
+            "kimi-for-coding",
             "kimi-k2.5",
             "kimi-for-coding",
             "kimi-k2-thinking",
@@ -4200,9 +4200,9 @@ def _model_flow_bedrock(config, current_model=""):
             deduped.append(m)
 
         _RECOMMENDED = [
-            "us.anthropic.claude-sonnet-4-6",
-            "us.anthropic.claude-opus-4-6",
-            "us.anthropic.claude-haiku-4-5",
+            "kimi-for-coding",
+            "kimi-k2.5",
+            "kimi-k2-turbo-preview",
             "us.amazon.nova-pro",
             "us.amazon.nova-lite",
             "us.amazon.nova-micro",
@@ -4718,7 +4718,7 @@ def _model_flow_anthropic(config, current_model=""):
         selected = _prompt_model_selection(model_list, current_model=current_model)
     else:
         try:
-            selected = input("Model name (e.g., claude-sonnet-4-20250514): ").strip()
+            selected = input("Model name (e.g., kimi-for-coding): ").strip()
         except (KeyboardInterrupt, EOFError):
             selected = None
 
@@ -7477,7 +7477,7 @@ For more help on a command:
         "--model",
         default=None,
         help=(
-            "Model override for this invocation (e.g. anthropic/claude-sonnet-4.6). "
+            "Model override for this invocation (e.g. kimi-for-coding). "
             "Applies to -z/--oneshot and --tui. Also settable via HERMES_INFERENCE_MODEL env var."
         ),
     )
@@ -7586,7 +7586,7 @@ For more help on a command:
         "--image", help="Optional local image path to attach to a single query"
     )
     chat_parser.add_argument(
-        "-m", "--model", help="Model to use (e.g., anthropic/claude-sonnet-4)"
+        "-m", "--model", help="Model to use (e.g., kimi-for-coding)"
     )
     chat_parser.add_argument(
         "-t", "--toolsets", help="Comma-separated toolsets to enable"

@@ -12,7 +12,7 @@
 #   # Override model:
 #   python environments/benchmarks/tblite/tblite_env.py evaluate \
 #       --config environments/benchmarks/tblite/default.yaml \
-#       --openai.model_name anthropic/claude-sonnet-4
+#       --openai.model_name kimi-for-coding
 
 env:
   enabled_toolsets: ["terminal", "file"]
@@ -33,7 +33,7 @@ env:
 
 openai:
   base_url: "https://openrouter.ai/api/v1"
-  model_name: "anthropic/claude-opus-4.6"
+  model_name: "kimi-for-coding"
   server_type: "openai"
   health_check: false
   # api_key loaded from OPENROUTER_API_KEY in .env

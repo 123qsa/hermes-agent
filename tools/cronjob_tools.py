@@ -496,7 +496,7 @@ Important safety rule: cron-run sessions should not recursively schedule more cr
                     },
                     "model": {
                         "type": "string",
-                        "description": "Model name (e.g. 'anthropic/claude-sonnet-4', 'claude-sonnet-4')"
+                        "description": "Model name (e.g. 'kimi-for-coding', 'kimi-k2.5')"
                     }
                 },
                 "required": ["model"]

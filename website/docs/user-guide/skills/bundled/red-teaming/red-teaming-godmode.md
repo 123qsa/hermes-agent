@@ -85,7 +85,7 @@ exec(open(os.path.expanduser(
 result = auto_jailbreak()
 
 # Or specify a model explicitly
-result = auto_jailbreak(model="anthropic/claude-sonnet-4")
+result = auto_jailbreak(model="kimi-for-coding")
 
 # Dry run — test without writing config
 result = auto_jailbreak(dry_run=True)
@@ -332,7 +332,7 @@ messages = [{"role": "system", "content": system}] + prefill + [
 ]
 
 response = client.chat.completions.create(
-    model="anthropic/claude-3.5-sonnet",
+    model="kimi-for-coding",
     messages=messages,
 )
 print(response.choices[0].message.content)

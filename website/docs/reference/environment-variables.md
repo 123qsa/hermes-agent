@@ -432,7 +432,7 @@ The primary model fallback is configured exclusively through `config.yaml` — t
 ```yaml
 fallback_model:
   provider: openrouter
-  model: anthropic/claude-sonnet-4
+  model: kimi-for-coding
 ```
 
 See [Fallback Providers](/docs/user-guide/features/fallback-providers) for full details.

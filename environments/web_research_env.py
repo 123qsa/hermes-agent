@@ -241,7 +241,7 @@ class WebResearchEnv(HermesAgentBaseEnv):
         server_configs = [
             APIServerConfig(
                 base_url="https://openrouter.ai/api/v1",
-                model_name="anthropic/claude-sonnet-4.5",
+                model_name="kimi-for-coding",
                 server_type="openai",
                 api_key=os.getenv("OPENROUTER_API_KEY", ""),
                 health_check=False,

@@ -16,7 +16,7 @@ Features:
 Usage:
     from run_agent import AIAgent
     
-    agent = AIAgent(base_url="http://localhost:30000/v1", model="claude-opus-4-20250514")
+    agent = AIAgent(base_url="http://localhost:30000/v1", model="kimi-for-coding")
     response = agent.run_conversation("Tell me about the latest Python updates")
 """
 
@@ -901,7 +901,7 @@ class AIAgent:
             api_key (str): API key for authentication (optional, uses env var if not provided)
             provider (str): Provider identifier (optional; used for telemetry/routing hints)
             api_mode (str): API mode override: "chat_completions" or "codex_responses"
-            model (str): Model name to use (default: "anthropic/claude-opus-4.6")
+            model (str): Model name to use (default: "kimi-for-coding")
             max_iterations (int): Maximum number of tool calling iterations (default: 90)
             tool_delay (float): Delay between tool calls in seconds (default: 1.0)
             enabled_toolsets (List[str]): Only enable tools from these toolsets (optional)
@@ -12664,7 +12664,7 @@ def main(
 
     Args:
         query (str): Natural language query for the agent. Defaults to Python 3.13 example.
-        model (str): Model name to use (OpenRouter format: provider/model). Defaults to anthropic/claude-sonnet-4.6.
+        model (str): Model name to use (OpenRouter format: provider/model). Defaults to kimi-for-coding.
         api_key (str): API key for authentication. Uses OPENROUTER_API_KEY env var if not provided.
         base_url (str): Base URL for the model API. Defaults to https://openrouter.ai/api/v1
         max_turns (int): Maximum number of API call iterations. Defaults to 10.

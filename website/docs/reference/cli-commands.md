@@ -105,7 +105,7 @@ Examples:
 ```bash
 hermes
 hermes chat -q "Summarize the latest PRs"
-hermes chat --provider openrouter --model anthropic/claude-sonnet-4.6
+hermes chat --provider openrouter --model kimi-for-coding
 hermes chat --toolsets web,terminal,skills
 hermes chat --quiet -q "Return only JSON"
 hermes chat --worktree -q "Review this repo and open a PR"
@@ -142,18 +142,18 @@ Switch between already-configured models without leaving a session:
 
 ```
 /model                              # Show current model and available options
-/model claude-sonnet-4              # Switch model (auto-detects provider)
+/model kimi-for-coding              # Switch model (auto-detects provider)
 /model zai:glm-5                    # Switch provider and model
 /model custom:qwen-2.5              # Use model on your custom endpoint
 /model custom                       # Auto-detect model from custom endpoint
 /model custom:local:qwen-2.5        # Use a named custom provider
-/model openrouter:anthropic/claude-sonnet-4  # Switch back to cloud
+/model openrouter:kimi-for-coding  # Switch back to cloud
 ```
 
 By default, `/model` changes apply **to the current session only**. Add `--global` to persist the change to `config.yaml`:
 
 ```
-/model claude-sonnet-4 --global     # Switch and save as new default
+/model kimi-for-coding --global     # Switch and save as new default
 ```
 
 :::info What if I only see OpenRouter models?
@@ -380,7 +380,7 @@ python:           3.11.14
 openai_sdk:       2.24.0
 profile:          default
 hermes_home:      ~/.hermes
-model:            anthropic/claude-opus-4.6
+model:            kimi-for-coding
 provider:         openrouter
 terminal:         local
 

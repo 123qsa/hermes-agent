@@ -44,7 +44,7 @@ The simplest way to use Hermes is the `chat()` method — pass a message, get a 
 from run_agent import AIAgent
 
 agent = AIAgent(
-    model="anthropic/claude-sonnet-4",
+    model="kimi-for-coding",
     quiet_mode=True,
 )
 response = agent.chat("What is the capital of France?")
@@ -65,7 +65,7 @@ For more control over the conversation, use `run_conversation()` directly. It re
 
 ```python
 agent = AIAgent(
-    model="anthropic/claude-sonnet-4",
+    model="kimi-for-coding",
     quiet_mode=True,
 )
 
@@ -101,14 +101,14 @@ Control which toolsets the agent has access to using `enabled_toolsets` or `disa
 ```python
 # Only enable web tools (browsing, search)
 agent = AIAgent(
-    model="anthropic/claude-sonnet-4",
+    model="kimi-for-coding",
     enabled_toolsets=["web"],
     quiet_mode=True,
 )
 
 # Enable everything except terminal access
 agent = AIAgent(
-    model="anthropic/claude-sonnet-4",
+    model="kimi-for-coding",
     disabled_toolsets=["terminal"],
     quiet_mode=True,
 )
@@ -126,7 +126,7 @@ Maintain conversation state across multiple turns by passing the message history
 
 ```python
 agent = AIAgent(
-    model="anthropic/claude-sonnet-4",
+    model="kimi-for-coding",
     quiet_mode=True,
 )
 
@@ -152,7 +152,7 @@ Enable trajectory saving to capture conversations in ShareGPT format — useful 
 
 ```python
 agent = AIAgent(
-    model="anthropic/claude-sonnet-4",
+    model="kimi-for-coding",
     save_trajectories=True,
     quiet_mode=True,
 )
@@ -171,7 +171,7 @@ Use `ephemeral_system_prompt` to set a custom system prompt that guides the agen
 
 ```python
 agent = AIAgent(
-    model="anthropic/claude-sonnet-4",
+    model="kimi-for-coding",
     ephemeral_system_prompt="You are a SQL expert. Only answer database questions.",
     quiet_mode=True,
 )
@@ -207,7 +207,7 @@ prompts = [
 def process_prompt(prompt):
     # Create a fresh agent per task for thread safety
     agent = AIAgent(
-        model="anthropic/claude-sonnet-4",
+        model="kimi-for-coding",
         quiet_mode=True,
         skip_memory=True,
     )
@@ -239,7 +239,7 @@ app = FastAPI()
 
 class ChatRequest(BaseModel):
     message: str
-    model: str = "anthropic/claude-sonnet-4"
+    model: str = "kimi-for-coding"
 
 @app.post("/chat")
 async def chat(request: ChatRequest):
@@ -268,7 +268,7 @@ async def on_message(message):
     if message.content.startswith("!hermes "):
         query = message.content[8:]
         agent = AIAgent(
-            model="anthropic/claude-sonnet-4",
+            model="kimi-for-coding",
             quiet_mode=True,
             skip_context_files=True,
             skip_memory=True,
@@ -291,7 +291,7 @@ from run_agent import AIAgent
 diff = subprocess.check_output(["git", "diff", "main...HEAD"]).decode()
 
 agent = AIAgent(
-    model="anthropic/claude-sonnet-4",
+    model="kimi-for-coding",
     quiet_mode=True,
     skip_context_files=True,
     skip_memory=True,
@@ -310,7 +310,7 @@ print(review)
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
-| `model` | `str` | `"anthropic/claude-opus-4.6"` | Model in OpenRouter format |
+| `model` | `str` | `"kimi-for-coding"` | Model in OpenRouter format |
 | `quiet_mode` | `bool` | `False` | Suppress CLI output |
 | `enabled_toolsets` | `List[str]` | `None` | Whitelist specific toolsets |
 | `disabled_toolsets` | `List[str]` | `None` | Blacklist specific toolsets |

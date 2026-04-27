@@ -571,7 +571,7 @@ def _resolve_model() -> str:
         return str(m.get("default", "") or "").strip()
     if isinstance(m, str) and m:
         return m.strip()
-    return "anthropic/claude-sonnet-4"
+    return "kimi-for-coding"
 
 
 def _resolve_startup_runtime() -> tuple[str, str | None]:

@@ -12,7 +12,7 @@ Usage in execute_code:
     
     result = auto_jailbreak()  # Uses current model from config
     # or:
-    result = auto_jailbreak(model="anthropic/claude-sonnet-4")
+    result = auto_jailbreak(model="kimi-for-coding")
 """
 
 import os
@@ -427,7 +427,7 @@ def auto_jailbreak(model=None, base_url=None, api_key=None,
     4. Locks in the winning combo (writes config.yaml + prefill.json)
     
     Args:
-        model: Model ID (e.g. "anthropic/claude-sonnet-4"). Auto-detected if None.
+        model: Model ID (e.g. "kimi-for-coding"). Auto-detected if None.
         base_url: API base URL. Auto-detected if None.
         api_key: API key. Auto-detected if None.
         canary: Custom canary query to test with. Uses default if None.

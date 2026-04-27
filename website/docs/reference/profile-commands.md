@@ -143,7 +143,7 @@ This shows the profile's Hermes home directory, not the terminal working directo
 $ hermes profile show work
 Profile: work
 Path:    ~/.hermes/profiles/work
-Model:   anthropic/claude-sonnet-4 (anthropic)
+Model:   kimi-for-coding (openrouter)
 Gateway: stopped
 Skills:  12
 .env:    exists

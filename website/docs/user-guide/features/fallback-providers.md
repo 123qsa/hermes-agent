@@ -26,7 +26,7 @@ Add a `fallback_model` section to `~/.hermes/config.yaml`:
 ```yaml
 fallback_model:
   provider: openrouter
-  model: anthropic/claude-sonnet-4
+  model: kimi-for-coding
 ```
 
 Both `provider` and `model` are **required**. If either is missing, the fallback is disabled.
@@ -108,14 +108,14 @@ model:
 
 fallback_model:
   provider: openrouter
-  model: anthropic/claude-sonnet-4
+  model: kimi-for-coding
 ```
 
 **Nous Portal as fallback for OpenRouter:**
 ```yaml
 model:
   provider: openrouter
-  default: anthropic/claude-opus-4
+  default: kimi-for-coding
 
 fallback_model:
   provider: nous
@@ -242,7 +242,7 @@ And the fallback model uses:
 ```yaml
 fallback_model:
   provider: openrouter
-  model: anthropic/claude-sonnet-4
+  model: kimi-for-coding
   # base_url: http://localhost:8000/v1               # Optional custom endpoint
 ```
 

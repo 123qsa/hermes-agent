@@ -157,7 +157,7 @@ _API_KEY_PROVIDER_AUX_MODELS: Dict[str, str] = {
     "kimi-coding-cn": "kimi-k2-turbo-preview",
     "minimax": "MiniMax-M2.7",
     "minimax-cn": "MiniMax-M2.7",
-    "anthropic": "claude-haiku-4-5-20251001",
+    "anthropic": "kimi-for-coding",
     "ai-gateway": "google/gemini-3-flash",
     "opencode-zen": "gemini-3-flash",
     "opencode-go": "glm-5",
@@ -1255,7 +1255,7 @@ def _try_anthropic() -> Tuple[Optional[Any], Optional[str]]:
 
     from agent.anthropic_adapter import _is_oauth_token
     is_oauth = _is_oauth_token(token)
-    model = _API_KEY_PROVIDER_AUX_MODELS.get("anthropic", "claude-haiku-4-5-20251001")
+    model = _API_KEY_PROVIDER_AUX_MODELS.get("anthropic", "kimi-for-coding")
     logger.debug("Auxiliary client: Anthropic native (%s) at %s (oauth=%s)", model, base_url, is_oauth)
     try:
         real_client = build_anthropic_client(token, base_url)
@@ -2072,7 +2072,7 @@ def resolve_provider_client(
             return None, None
 
         region = resolve_bedrock_region()
-        default_model = "anthropic.claude-haiku-4-5-20251001-v1:0"
+        default_model = "kimi-for-coding"
         final_model = _normalize_resolved_model(model or default_model, provider)
         try:
             real_client = build_anthropic_bedrock_client(region)

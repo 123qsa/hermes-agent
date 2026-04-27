@@ -378,7 +378,7 @@ def my_callback(session_id: str, user_message: str, conversation_history: list,
 | `user_message` | `str` | The user's original message for this turn (before any skill injection) |
 | `conversation_history` | `list` | Copy of the full message list (OpenAI format: `[{"role": "user", "content": "..."}]`) |
 | `is_first_turn` | `bool` | `True` if this is the first turn of a new session, `False` on subsequent turns |
-| `model` | `str` | The model identifier (e.g. `"anthropic/claude-sonnet-4.6"`) |
+| `model` | `str` | The model identifier (e.g. `"kimi-for-coding"`) |
 | `platform` | `str` | Where the session is running: `"cli"`, `"telegram"`, `"discord"`, etc. |
 
 **Fires:** In `run_agent.py`, inside `run_conversation()`, after context compression but before the main `while` loop. Fires once per `run_conversation()` call (i.e. once per user turn), not once per API call within the tool loop.

@@ -241,7 +241,7 @@ async def auth_middleware(request: Request, call_next):
 _SCHEMA_OVERRIDES: Dict[str, Dict[str, Any]] = {
     "model": {
         "type": "string",
-        "description": "Default model (e.g. anthropic/claude-sonnet-4.6)",
+        "description": "Default model (e.g. kimi-for-coding)",
         "category": "general",
     },
     "model_context_length": {
@@ -786,7 +786,7 @@ async def search_sessions(q: str = "", limit: int = 20):
 def _normalize_config_for_web(config: Dict[str, Any]) -> Dict[str, Any]:
     """Normalize config for the web UI.
 
-    Hermes supports ``model`` as either a bare string (``"anthropic/claude-sonnet-4"``)
+    Hermes supports ``model`` as either a bare string (``"kimi-for-coding"``)
     or a dict (``{default: ..., provider: ..., base_url: ...}``).  The schema is built
     from DEFAULT_CONFIG where ``model`` is a string, but user configs often have the
     dict form.  Normalize to the string form so the frontend schema matches.

@@ -19,7 +19,7 @@
 # Usage:
 #   services.hermes-agent = {
 #     enable = true;
-#     settings.model = "anthropic/claude-sonnet-4";
+#     settings.model = "kimi-for-coding";
 #     environmentFiles = [ config.sops.secrets."hermes/env".path ];
 #   };
 #
@@ -256,7 +256,7 @@
         '';
         example = literalExpression ''
           {
-            model = "anthropic/claude-sonnet-4";
+            model = "kimi-for-coding";
             terminal.backend = "local";
             compression = { enabled = true; threshold = 0.85; };
             toolsets = [ "all" ];

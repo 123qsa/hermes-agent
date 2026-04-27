@@ -3538,7 +3538,7 @@ def _update_config_for_provider(
     ``model.default`` value.  This prevents a race condition where the
     gateway (which re-reads config per-message) picks up the new provider
     before the caller has finished model selection, resulting in a
-    mismatched model/provider (e.g. ``anthropic/claude-opus-4.6`` sent to
+    mismatched model/provider (e.g. ``kimi-for-coding`` sent to
     MiniMax's API).
     """
     # Set active_provider in auth.json so auto-resolution picks this provider
@@ -3581,7 +3581,7 @@ def _update_config_for_provider(
 
     # When switching to a non-OpenRouter provider, ensure model.default is
     # valid for the new provider.  An OpenRouter-formatted name like
-    # "anthropic/claude-opus-4.6" will fail on direct-API providers.
+    # "kimi-for-coding" will fail on direct-API providers.
     if default_model:
         cur_default = model_cfg.get("default", "")
         if not cur_default or "/" in cur_default:

@@ -191,7 +191,7 @@ db = SessionDB(db_path=Path("/tmp/test.db"))  # Custom path
 db.create_session(
     session_id="sess_abc123",
     source="cli",
-    model="anthropic/claude-sonnet-4.6",
+    model="kimi-for-coding",
     user_id="user_1",
     parent_session_id=None,  # or previous session ID for lineage
 )

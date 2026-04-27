@@ -94,7 +94,7 @@ Hermes separates secrets from normal config:
 The easiest way to set values correctly is through the CLI:
 
 ```bash
-hermes config set model anthropic/claude-opus-4.6
+hermes config set model kimi-for-coding
 hermes config set terminal.backend docker
 hermes config set OPENROUTER_API_KEY sk-or-...
 ```
